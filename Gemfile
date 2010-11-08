@@ -36,4 +36,5 @@ group :test, :development do
   gem 'cucumber-rails'
   gem 'pickle'
   gem 'factory_girl_rails'
+  gem 'rcov'
 end
