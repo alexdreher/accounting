@@ -22,6 +22,6 @@ describe "accounts/show.html.erb" do
     # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
     rendered.should match(/Title/)
     # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
-    rendered.should match(/false/)
+    rendered.should match(/0/)
   end
 end

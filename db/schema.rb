@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101107232451) do
+ActiveRecord::Schema.define(:version => 20101108014150) do
 
   create_table "accounts", :force => true do |t|
     t.integer  "parent_id"
     t.integer  "number"
     t.integer  "account_type_id"
     t.string   "title"
-    t.boolean  "bookable"
+    t.integer  "bookable",        :default => 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
