@@ -1,0 +1,30 @@
+# Logfile created on 2010-11-08 00:36:02 +0100 by logger.rb/25413
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/new with {} and HTTP headers {"HTTP_REFERER"=>"accounts"}
+REQUESTING PAGE: POST /accounts with {"utf8"=>"\xE2\x9C\x93", "account"=>{"parent_id"=>"", "number"=>"1502", "account_type_id"=>"", "title"=>"", "bookable"=>"0"}, "commit"=>"Create Account"} and HTTP headers {"HTTP_REFERER"=>"/accounts/new"}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/new with {} and HTTP headers {"HTTP_REFERER"=>"accounts"}
+REQUESTING PAGE: POST /accounts with {"utf8"=>"\xE2\x9C\x93", "account"=>{"parent_id"=>"", "number"=>"1502", "account_type_id"=>"", "title"=>"", "bookable"=>"0"}, "commit"=>"Create Account"} and HTTP headers {"HTTP_REFERER"=>"/accounts/new"}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/new with {} and HTTP headers {"HTTP_REFERER"=>"accounts"}
+REQUESTING PAGE: POST /accounts with {"utf8"=>"\xE2\x9C\x93", "account"=>{"parent_id"=>"", "number"=>"1502", "account_type_id"=>"", "title"=>"", "bookable"=>"0"}, "commit"=>"Create Account"} and HTTP headers {"HTTP_REFERER"=>"/accounts/new"}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/new with {} and HTTP headers {"HTTP_REFERER"=>"accounts"}
+REQUESTING PAGE: POST /accounts with {"utf8"=>"\xE2\x9C\x93", "account"=>{"parent_id"=>"", "number"=>"1502", "account_type_id"=>"", "title"=>"", "bookable"=>"0"}, "commit"=>"Create Account"} and HTTP headers {"HTTP_REFERER"=>"/accounts/new"}
+REQUESTING PAGE: GET http://www.example.com/accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET http://www.example.com/accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/accounts"}
+REQUESTING PAGE: POST /accounts with {"utf8"=>"\xE2\x9C\x93", "account"=>{"parent_id"=>"", "number"=>"1502", "account_type_id"=>"", "title"=>"", "bookable"=>"0"}, "commit"=>"Create Account"} and HTTP headers {"HTTP_REFERER"=>"/accounts/new"}
+REQUESTING PAGE: GET http://www.example.com/accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET http://www.example.com/accounts with {} and HTTP headers {}
+REQUESTING PAGE: GET /accounts/new with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/accounts"}
+REQUESTING PAGE: POST /accounts with {"utf8"=>"\xE2\x9C\x93", "account"=>{"parent_id"=>"", "number"=>"1502", "account_type_id"=>"", "title"=>"", "bookable"=>"0"}, "commit"=>"Create Account"} and HTTP headers {"HTTP_REFERER"=>"/accounts/new"}
