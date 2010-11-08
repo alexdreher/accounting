@@ -8,7 +8,19 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="bodywrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>Accounting</h1>
+		</div>
+		<div id="navigation">
+			<%= link_to "Accounts", accounts_path %> |
+		</div>
+	</div>
+	<div id="contentwrapper">
+		<%= yield %>
+	</div>
+</div>
 
 </body>
 </html>

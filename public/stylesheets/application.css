@@ -1,0 +1,23 @@
+#bodywrapper {
+  width:760px;
+  margin:0 auto;
+  border:1px solid #000;
+}
+
+#navigation {
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+  padding:2px 10px;
+}
+
+#logo {
+  padding:10px;
+}
+
+#contentwrapper {
+  padding:10px;
+}
+
+#contentwrapper > h1 {
+  font-size:18px;
+}
