@@ -37,4 +37,6 @@ group :test, :development do
   gem 'pickle'
   gem 'factory_girl_rails'
   gem 'rcov'
+  gem 'autotest'
+  gem 'autotest-growl'
 end

@@ -30,6 +30,8 @@ GEM
     activesupport (3.0.1)
     arel (1.0.1)
       activesupport (~> 3.0.0)
+    autotest (4.4.2)
+    autotest-growl (0.2.6)
     builder (2.1.2)
     capybara (0.4.0)
       celerity (>= 0.7.9)
@@ -132,6 +134,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autotest
+  autotest-growl
   capybara
   cucumber
   cucumber-rails
