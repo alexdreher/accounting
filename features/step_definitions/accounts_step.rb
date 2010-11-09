@@ -1,6 +1,6 @@
 Given /^I have accounts numbered (\d.+)$/ do |numbers|
   numbers.split(', ').each do |number|
-    Account.create!(:number => number.to_i)
+    Account.create!(:number => number.to_i, :title => "Title")
   end
 end
 

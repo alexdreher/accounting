@@ -14,10 +14,9 @@ Feature: Manage Accounts
 		And I am on the list of accounts
 		When I follow "New Account"
 		And I fill in "Number" with "1502"
-		And I press "Create"
-		Then I should see "Account was successfully created."
+		And I fill in "Title" with "Title"
+		And I press "Create Account"
+		Then I should see "Account was successfully created"
 		And I should see "1502"
+		And I should see "Title"
 		And I should have 1 account
-
-		
-		

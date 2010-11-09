@@ -32,7 +32,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 group :test, :development do
   gem "rspec-rails", "~> 2.0.1"
   gem 'capybara'
-  gem 'cucumber'
+  gem 'launchy'
   gem 'cucumber-rails'
   gem 'pickle'
   gem 'factory_girl_rails'

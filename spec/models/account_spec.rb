@@ -1,23 +1,41 @@
 require 'spec_helper'
 
+module AccountSpecHelper
+  def valid_account_attributes
+    {
+      :number => 1502,
+      :title => "Title"
+    }
+  end
+end
+
 describe Account do
+  include AccountSpecHelper
+  
   before(:each) do
-    @a = Account.new()
+    @account = Account.new()
   end
   
   it "should have a number" do
-    @a.save.should be_false
-    @a.should have(1).error_on(:number)
+    @account.should_not be_valid
+    @account.should have(1).error_on(:number)    
   end
   
   it "should have a title" do
-    @a.save.should be_false
-    @a.should have(1).error_on(:title)
+    @account.should_not be_valid
+    @account.should have(1).error_on(:title)
+  end
+  
+  it "should be valid" do
+    @account.attributes = valid_account_attributes
+    @account.should be_valid
   end
   
   it "should have a unique number" do
-    pending
+    @account.attributes = valid_account_attributes
+    @account.save
     
-    Account.should have(1).record  
+    newaccount = Account.new(valid_account_attributes)
+    newaccount.should have(1).error_on(:number)
   end  
 end
