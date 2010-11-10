@@ -31,12 +31,6 @@ begin
       t.fork = true # You may get faster startup if you set this to false
       t.profile = 'rerun'
     end
-    
-    Cucumber::Rake::Task.new(:rcov) do |t|    
-      t.rcov = true
-      t.rcov_opts = %w{--rails --exclude osx\/objc,gems\/,spec\/}
-      t.rcov_opts << %[-o "features_rcov"]
-    end
 
     desc 'Run all features'
     task :all => [:ok, :wip]

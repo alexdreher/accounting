@@ -19,12 +19,9 @@ namespace :rcov do
   end
   
   RSpec::Core::RakeTask.new(:rspec_run) do |t|
-    t.spec_opts = ['--options', "\"#{Rails.root}/spec/spec.opts\""]
-    t.pattern = 'spec/**/*_spec.rb'
+    t.pattern = 'spec/**/*_spec.rb'    
     t.rcov = true
-    t.rcov_opts = lambda do
-      IO.readlines("#{Rails.root}/spec/rcov.opts").map {|l| l.chomp.split " "}.flatten
-    end
+    t.rcov_opts = %w{--rails --exclude osx\/objc,gems\/,spec\/}
   end
   
   desc "Run both specs and features to generate aggregated coverage"

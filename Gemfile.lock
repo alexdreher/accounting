@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/aslakhellesoy/cucumber-rails.git
+  revision: ae7c956c50fcbe1b0ab3abbaa7ada89aded4accb
+  specs:
+    cucumber-rails (0.3.3)
+      aruba (~> 0.2.2)
+      cucumber (~> 0.9.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -30,8 +38,12 @@ GEM
     activesupport (3.0.1)
     arel (1.0.1)
       activesupport (~> 3.0.0)
+    aruba (0.2.4)
+      background_process
+      cucumber (~> 0.9.3)
     autotest (4.4.2)
     autotest-growl (0.2.6)
+    background_process (1.2)
     builder (2.1.2)
     capybara (0.4.0)
       celerity (>= 0.7.9)
@@ -52,8 +64,6 @@ GEM
       gherkin (~> 2.2.9)
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
-    cucumber-rails (0.3.2)
-      cucumber (>= 0.8.0)
     culerity (0.2.12)
     diff-lcs (1.1.2)
     erubis (2.6.6)
@@ -141,7 +151,8 @@ DEPENDENCIES
   autotest
   autotest-growl
   capybara
-  cucumber-rails
+  cucumber
+  cucumber-rails!
   factory_girl_rails
   launchy
   pickle

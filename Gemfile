@@ -30,10 +30,11 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # end
 
 group :test, :development do
+  gem 'capybara'  
+  gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
+  gem 'cucumber'
   gem "rspec-rails", "~> 2.0.1"
-  gem 'capybara'
   gem 'launchy'
-  gem 'cucumber-rails'
   gem 'pickle'
   gem 'factory_girl_rails'
   gem 'rcov'
