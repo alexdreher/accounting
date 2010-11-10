@@ -17,6 +17,8 @@ require 'capybara/rails'
 require 'capybara/cucumber'
 require 'capybara/session'
 
+require "#{Rails.root}/spec/factories"
+
 # next line is monkeypatched, see https://rspec.lighthouseapp.com/projects/16211/tickets/674-undefined-local-variable-or-method-node-for-capybaradrivernode
 #require 'cucumber/rails/capybara_javascript_emulation' # Lets you click links with onclick javascript handlers without using @culerity or @javascript
 
