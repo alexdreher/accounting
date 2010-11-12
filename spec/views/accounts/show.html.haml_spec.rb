@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "accounts/show.html.erb" do
+describe "accounts/show.html.haml" do
   before(:each) do
     @account = assign(:account, stub_model(Account,
       :parent_id => 1,
