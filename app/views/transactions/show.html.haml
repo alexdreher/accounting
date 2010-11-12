@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Booking date:
+  = @transaction.booking_date
+%p
+  %b Debit:
+  = @transaction.debit_id
+%p
+  %b Credit:
+  = @transaction.credit_id
+%p
+  %b Amount:
+  = @transaction.amount
+%p
+  %b Title:
+  = @transaction.title
+
+= link_to 'Edit', edit_transaction_path(@transaction)
+\|
+= link_to 'Back', transactions_path

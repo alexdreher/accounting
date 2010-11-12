@@ -1,0 +1,27 @@
+%h1 Listing transactions
+
+%table
+  %tr
+    %th Booking date
+    %th Debit
+    %th Credit
+    %th Amount
+    %th Title
+    %th
+    %th
+    %th
+
+  - @transactions.each do |transaction|
+    %tr
+      %td= transaction.booking_date
+      %td= transaction.debit_id
+      %td= transaction.credit_id
+      %td= transaction.amount
+      %td= transaction.title
+      %td= link_to 'Show', transaction
+      %td= link_to 'Edit', edit_transaction_path(transaction)
+      %td= link_to 'Destroy', transaction, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Transaction', new_transaction_path

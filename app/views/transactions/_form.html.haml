@@ -1,0 +1,25 @@
+= form_for @transaction do |f|
+  -if @transaction.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@transaction.errors.count, "error")} prohibited this transaction from being saved:"
+      %ul
+        - @transaction.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :booking_date
+    = f.date_select :booking_date
+  .field
+    = f.label :debit_id
+    = f.text_field :debit_id
+  .field
+    = f.label :credit_id
+    = f.text_field :credit_id
+  .field
+    = f.label :amount
+    = f.text_field :amount
+  .field
+    = f.label :title
+    = f.text_field :title
+  .actions
+    = f.submit 'Save'
