@@ -8,6 +8,9 @@ gem 'rails', '3.0.1'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'haml'
+# for conversion
+gem 'ruby_parser'
+gem 'hpricot'
 
 # Use unicorn as the web server
 # gem 'unicorn'

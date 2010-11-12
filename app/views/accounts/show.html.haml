@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %b Parent:
+  = @account.parent_id
+%p
+  %b Number:
+  = @account.number
+%p
+  %b Account type:
+  = @account.account_type_id
+%p
+  %b Title:
+  = @account.title
+%p
+  %b Bookable:
+  = @account.bookable
+= link_to 'Edit', edit_account_path(@account)
+|
+\#{link_to 'Back', accounts_path}

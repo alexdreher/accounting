@@ -1,0 +1,23 @@
+%h1 Listing accounts
+%table
+  %tr
+    %th Parent
+    %th Number
+    %th Account type
+    %th Title
+    %th Bookable
+    %th
+    %th
+    %th
+  - @accounts.each do |account|
+    %tr
+      %td= account.parent_id
+      %td= account.number
+      %td= account.account_type_id
+      %td= account.title
+      %td= account.bookable
+      %td= link_to 'Show', account
+      %td= link_to 'Edit', edit_account_path(account)
+      %td= link_to 'Destroy', account, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New Account', new_account_path

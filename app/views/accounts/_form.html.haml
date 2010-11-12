@@ -1,0 +1,31 @@
+= form_for(@account) do |f|
+  - if @account.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@account.errors.count, "error")
+        prohibited this account from being saved:
+      %ul
+        - @account.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :parent_id
+    %br/
+    = f.text_field :parent_id
+  .field
+    = f.label :number
+    %br/
+    = f.text_field :number
+  .field
+    = f.label :account_type_id
+    %br/
+    = f.text_field :account_type_id
+  .field
+    = f.label :title
+    %br/
+    = f.text_field :title
+  .field
+    = f.label :bookable
+    %br/
+    = f.check_box :bookable
+  .actions
+    = f.submit
