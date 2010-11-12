@@ -12,6 +12,16 @@ The second build was then a Rails 2 web application, which met the requirement t
 This github project is a rewrite of the developed and used Rails 2 implementation in Rails 3, to get to know each other better.
 
 ## Tests
-This time, I use behavior driven development with cucumber. 
+This time, I use behavior driven development with cucumber. Have a look at the features in the `/features` directory and the RSpec-2 tests in the `/specs` folder. You can run the tests with:
 
-**Note:** The integration of all the different test plugins (RSpec-2, Cucumber, autotest, RCov) and tools was sometimes kind of tricky with the new Rails 3.
+* `cucumber` or `rake cucumber` (gives an error at the end on unimplemented features!)
+* `rake spec`
+* `autotest` while implementing (with growl notifications)
+
+and get coverage information with RCov by running
+
+* `rake rcov:cucumber`
+* `rake rcov:rspec` or simply:
+* `rake rcov:all`
+
+**Note:** The integration of all the different test plugins (RSpec-2, Cucumber, autotest, RCov) and tools was meanwhile kind of tricky with the new Rails 3.
