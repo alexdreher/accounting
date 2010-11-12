@@ -9,5 +9,5 @@ Then /^I should see (\w.+) table$/ do |table|
 end
 
 Given /^I have no transactions$/ do
-  pending #Transaction.delete_all
+  Transaction.delete_all
 end
