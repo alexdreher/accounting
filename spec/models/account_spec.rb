@@ -37,5 +37,9 @@ describe Account do
     
     newaccount = Account.new(valid_account_attributes)
     newaccount.should have(1).error_on(:number)
-  end  
+  end
+  
+  it "should have many transactions" do
+    @account.should respond_to(:transactions)
+  end
 end
