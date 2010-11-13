@@ -52,7 +52,7 @@ describe TransactionsController do
       it "redirects to the transactions page" do
         Transaction.stub(:new) { mock_transaction(:save => true) }
         post :create, :transaction => {}
-        response.should redirect_to(transaction_url)
+        response.should redirect_to(transactions_path)
       end
     end
 
