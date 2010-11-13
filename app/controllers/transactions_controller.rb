@@ -40,11 +40,12 @@ class TransactionsController < ApplicationController
   # POST /transactions
   # POST /transactions.xml
   def create
+    #params[:transaction][:booking_date] = Date.strptime(params[:transaction][:booking_date], '%d%m%y')
     @transaction = Transaction.new(params[:transaction])
 
     respond_to do |format|
       if @transaction.save
-        format.html { redirect_to(@transaction, :notice => 'Transaction was successfully created.') }
+        format.html { redirect_to(transactions_path, :notice => 'Transaction was successfully created.') }
         format.xml  { render :xml => @transaction, :status => :created, :location => @transaction }
       else
         format.html { render :action => "new" }

@@ -49,10 +49,10 @@ describe TransactionsController do
         assigns(:transaction).should be(mock_transaction)
       end
 
-      it "redirects to the created transaction" do
+      it "redirects to the transactions page" do
         Transaction.stub(:new) { mock_transaction(:save => true) }
         post :create, :transaction => {}
-        response.should redirect_to(transaction_url(mock_transaction))
+        response.should redirect_to(transaction_url)
       end
     end
 

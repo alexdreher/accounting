@@ -1,18 +1,28 @@
 %h1 Listing transactions
 
-%table
-  %tr
-    %th Booking date
-    %th Debit
-    %th Credit
-    %th Amount
-    %th Title
-    %th
-    %th
-    %th
-
+%table#transactions
+  %thead
+    %tr
+      %th{:colspan => "3"}
+        Balance:
+        %span#balance hi
+      %th{:colspan => "3"}
+        Annual amount:
+        %span#annual_amount hi
+    %tr
+      %th Id
+      %th Booking date
+      %th Debit
+      %th Credit
+      %th Amount
+      %th Title
+      %th
+      %th
+      %th
+  %tbody
   - @transactions.each do |transaction|
     %tr
+      %td= transaction.id
       %td= transaction.booking_date
       %td= transaction.debit_id
       %td= transaction.credit_id
