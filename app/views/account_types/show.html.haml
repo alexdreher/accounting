@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @account_type.title
+%p
+  %b Debit:
+  = @account_type.debit
+%p
+  %b Credit:
+  = @account_type.credit
+
+= link_to 'Edit', edit_account_type_path(@account_type)
+\|
+= link_to 'Back', account_types_path

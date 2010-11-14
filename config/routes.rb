@@ -1,4 +1,6 @@
 Accounting::Application.routes.draw do
+  resources :account_types
+
   resources :transactions
 
   resources :accounts

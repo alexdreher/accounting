@@ -18,7 +18,7 @@
   .field
     = f.label :account_type_id
     %br/
-    = f.text_field :account_type_id
+    = f.collection_select :account_type_id, AccountType.all, :id, :title
   .field
     = f.label :title
     %br/

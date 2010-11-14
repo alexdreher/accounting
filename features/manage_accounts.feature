@@ -3,6 +3,11 @@ Feature: Manage Accounts
 	As an accountant
 	I want to create and manage accounts
 	
+	Background:
+	  Given the following account_type records
+	    | title         | debit | credit |
+	    | Asset account | 1     | -1     |
+	
 	Scenario: Accounts List
 		Given I have accounts numbered 3102, 1502
 		When I go to the list of accounts
@@ -15,6 +20,7 @@ Feature: Manage Accounts
 		When I follow "New Account"
 		And I fill in "Number" with "1502"
 		And I fill in "Title" with "Title"
+		And I select "Asset account" from "Account type"
 		And I press "Create Account"
 		Then I should see "Account was successfully created"
 		And I should see "1502"

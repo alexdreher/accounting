@@ -4,7 +4,8 @@ module AccountSpecHelper
   def valid_account_attributes
     {
       :number => 1502,
-      :title => "Title"
+      :title => "Title",
+      :account_type_id => 1
     }
   end
 end
@@ -41,5 +42,9 @@ describe Account do
   
   it "should have many transactions" do
     @account.should respond_to(:transactions)
+  end
+  
+  it "should have an account type" do
+    @account.should respond_to(:account_type)
   end
 end
