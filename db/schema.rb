@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101108014150) do
+ActiveRecord::Schema.define(:version => 20101112185103) do
 
   create_table "accounts", :force => true do |t|
     t.integer  "parent_id"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(:version => 20101108014150) do
     t.integer  "account_type_id"
     t.string   "title"
     t.integer  "bookable",        :default => 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transactions", :force => true do |t|
+    t.date     "booking_date"
+    t.integer  "debit_id"
+    t.integer  "credit_id"
+    t.float    "amount"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

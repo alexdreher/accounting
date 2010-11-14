@@ -14,7 +14,7 @@ This github project is a rewrite of the developed and used Rails 2 implementatio
 ## Tests
 This time, I use behavior driven development with cucumber. Have a look at the features in the `/features` directory and the RSpec-2 tests in the `/specs` folder. You can run the tests with:
 
-* `cucumber` or `rake cucumber` (gives an error at the end on unimplemented features!)
+* `cucumber` or `rake cucumber`
 * `rake spec`
 * `autotest` while implementing (with growl notifications)
 
