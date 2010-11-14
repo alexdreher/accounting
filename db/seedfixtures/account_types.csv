@@ -1,0 +1,5 @@
+"id","title","debit","credit"
+1,"Asset account",1,-1
+2,"Liability account",-1,1
+3,"Revenue account",-1,1
+4,"Expense account",1,-1

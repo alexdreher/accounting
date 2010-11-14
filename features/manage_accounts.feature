@@ -3,11 +3,6 @@ Feature: Manage Accounts
 	As an accountant
 	I want to create and manage accounts
 	
-	Background:
-	  Given the following account_type records
-	    | title         | debit | credit |
-	    | Asset account | 1     | -1     |
-	
 	Scenario: Accounts List
 		Given I have accounts numbered 3102, 1502
 		When I go to the list of accounts

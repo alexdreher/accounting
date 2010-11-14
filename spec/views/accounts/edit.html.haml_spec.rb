@@ -19,7 +19,7 @@ describe "accounts/edit.html.haml" do
     assert_select "form", :action => account_path(@account), :method => "post" do
       assert_select "input#account_parent_id", :name => "account[parent_id]"
       assert_select "input#account_number", :name => "account[number]"
-      assert_select "input#account_account_type_id", :name => "account[account_type_id]"
+      assert_select "select#account_account_type_id", :name => "account[account_type_id]"
       assert_select "input#account_title", :name => "account[title]"
       assert_select "input#account_bookable", :name => "account[bookable]"
     end
