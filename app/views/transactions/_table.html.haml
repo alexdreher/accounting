@@ -1,0 +1,18 @@
+%table#transactions.display
+  %thead
+    %tr
+      %th Id
+      %th Booking date
+      %th Debit
+      %th Credit
+      %th Amount
+      %th Title
+  %tbody
+    - @transactions.each do |transaction|
+      %tr
+        %td= transaction.id
+        %td= transaction.booking_date
+        %td= transaction.debit_id
+        %td= transaction.credit_id
+        %td= transaction.amount
+        %td= transaction.title

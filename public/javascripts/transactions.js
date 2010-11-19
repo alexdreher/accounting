@@ -10,3 +10,19 @@ $("#new_transaction").submit(function() {
   $('#transaction_book_date').select();
   return false;
 });
+
+$(document).ready(function() {
+	$('#transactions').dataTable( {
+		"aaSorting": [[0, 'desc']],
+		/*"bProcessing": true,*/
+		"aoColumns": [ 
+					/* id */      null,
+					/* date */   	{ "sType": "date", "sWidth": "110px" },
+					/* debit */   null,
+					/* credit */  null,
+					/* amount */  { "sClass": "right" },
+					/* title */   { "sWidth": "400px" }
+				]
+	} );
+	$('#transaction_book_date').select();
+} );

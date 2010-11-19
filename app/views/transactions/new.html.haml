@@ -1,5 +1,9 @@
 %h1 New transaction
 
+= render 'table', :locals => @transactions = {}
+
 = render 'form'
 
 = link_to 'Back', transactions_path
+
+= javascript_include_tag 'jquery.dataTables'

@@ -47,9 +47,11 @@ class TransactionsController < ApplicationController
       if @transaction.save
         format.html { redirect_to(transactions_path, :notice => 'Transaction was successfully created.') }
         format.xml  { render :xml => @transaction, :status => :created, :location => @transaction }
+        format.js
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @transaction.errors, :status => :unprocessable_entity }
+        format.js { render 'create_errors' } 
       end
     end
   end

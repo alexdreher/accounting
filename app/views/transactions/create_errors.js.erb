@@ -1,0 +1,5 @@
+$('.field').removeClass('field_with_errors');
+
+<% @transaction.errors.each do |attr,msg| %>
+	$('#transaction_<%= attr %>').parent('div').addClass('field_with_errors');
+<% end %>
