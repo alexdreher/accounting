@@ -3,6 +3,7 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
+tmp/*
 coverage/*
 coverage.data
 features_rcov/*

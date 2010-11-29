@@ -3,9 +3,15 @@ class AccountsController < ApplicationController
   # GET /accounts.xml
   def index
     @accounts = Account.all
+    
+    view = nil
+    case params[:view]
+    when 'balances'
+      view = "balances"
+    end
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render view }
       format.xml  { render :xml => @accounts }
     end
   end

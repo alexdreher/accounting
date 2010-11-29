@@ -11,17 +11,23 @@ Feature: Analysis
   
   Scenario: Balance list
     Given the following transaction records
-		  | Book date | Debit | Credit | Amount | Title |
-		  | 241014    | 2     | 1      | 1.23   | One   |
-		  | 251014    | 2     | 1      | 1.23   | Two   |
-		  | 261014    | 2     | 1      | 1.23   | Three |
-		  | 271014    | 2     | 1      | 1.23   | Four  |
-		  | 281014    | 2     | 1      | 1.23   | Five  |
-		  | 291014    | 2     | 1      | 1.23   | Six   |
+		  | book_date | debit_id | credit_id | amount | title |
+		  | 241014    | 2        | 1         | 1.23   | One   |
+		  | 251014    | 2        | 1         | 1.23   | Two   |
+		  | 261014    | 2        | 1         | 1.23   | Three |
+		  | 271014    | 2        | 1         | 1.23   | Four  |
+		  | 281014    | 2        | 1         | 1.23   | Five  |
+		  | 291014    | 2        | 1         | 1.23   | Six   |
+
     When I go to the list of account balances
+    Then show me the page
     Then I should see a balances table
-		  | 1502 | Test1 | 7.38€  |
-		  | 3102 | Test2 | -7.38€ |
+      | 1502 | Test1 | -7.38 | 1 |
+      | 3102 | Test2 | 7.38  | 2 |
+
+
+
+
 
   
   

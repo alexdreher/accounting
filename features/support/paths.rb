@@ -12,6 +12,8 @@ module NavigationHelpers
       '/'
     when /the list of accounts/
       accounts_path
+    when /the list of account balances/
+      accounts_path(:view => "balances")
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

@@ -5,7 +5,7 @@ Given /^the following (\w.+) records$/ do |model, table|
 end
 
 Then /^I should see a (\w.+) table$/ do |model, table|
-  table.diff!(tableish("table##{model}", 'td'))
+  table.diff!(tableish("table##{model} tbody tr", 'td'))
 end
 
 Given /^I have no transactions$/ do
