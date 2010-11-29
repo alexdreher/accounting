@@ -9,6 +9,7 @@ Feature: Analysis
 		  | 1  | 1502   | 1               | Test1 |
 		  | 2  | 3102   | 2               | Test2 |
   
+  # TODO: tests only asset/liability accounts, NOT revenue/expense accounts
   Scenario: Balance list
     Given the following transaction records
 		  | book_date | debit_id | credit_id | amount | title |
