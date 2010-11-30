@@ -16,7 +16,10 @@ describe Transaction do
   include TransactionSpecHelper
   
   before(:each) do
-    @accounts = Factory(:account)
+    @accounts = []
+    2.times do |n|
+      @accounts << Factory(:account, :number => 1501+n)
+    end
     @transaction = Transaction.new
   end
   
@@ -29,7 +32,8 @@ describe Transaction do
     @transaction.attributes = valid_transaction_attributes.except(:credit_id)
     @transaction.should_not be_valid
     @transaction.should have(1).error_on(:credit_id)
-    @transaction.credit_id = 1
+    @transaction.credit = 1501
+    @transaction.credit_id.should equal 1
     @transaction.should be_valid
   end
   
@@ -37,7 +41,8 @@ describe Transaction do
     @transaction.attributes = valid_transaction_attributes.except(:debit_id)
     @transaction.should_not be_valid
     @transaction.should have(1).error_on(:debit_id)
-    @transaction.debit_id = 1
+    @transaction.debit = 1502
+    @transaction.debit_id.should equal 2
     @transaction.should be_valid
   end
   

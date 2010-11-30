@@ -15,8 +15,8 @@ describe "transactions/new.html.haml" do
 
     # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
     assert_select "form", :action => transactions_path, :method => "post" do
-      assert_select "input#transaction_debit_id", :name => "transaction[debit_id]"
-      assert_select "input#transaction_credit_id", :name => "transaction[credit_id]"
+      assert_select "input#transaction_debit", :name => "transaction[debit]"
+      assert_select "input#transaction_credit", :name => "transaction[credit]"
       assert_select "input#transaction_amount", :name => "transaction[amount]"
       assert_select "input#transaction_title", :name => "transaction[title]"
     end
