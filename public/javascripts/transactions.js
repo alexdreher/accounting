@@ -12,7 +12,7 @@ $("#new_transaction").submit(function() {
 });
 
 $(document).ready(function() {
-	$('#transactions').dataTable( {
+	oTable = $('#transactions').dataTable( {
 		"aaSorting": [[0, 'desc']],
 		/*"bProcessing": true,*/
 		"aoColumns": [ 
