@@ -17,10 +17,7 @@ require 'capybara/rails'
 require 'capybara/cucumber'
 require 'capybara/session'
 
-require "#{Rails.root}/spec/factories"
-
-# seed the DB with fixed application values
-require "#{Rails.root}/db/seeds.rb"
+#require "#{Rails.root}/spec/factories"
 
 # next line is monkeypatched, see https://rspec.lighthouseapp.com/projects/16211/tickets/674-undefined-local-variable-or-method-node-for-capybaradrivernode
 #require 'cucumber/rails/capybara_javascript_emulation' # Lets you click links with onclick javascript handlers without using @culerity or @javascript
@@ -61,6 +58,9 @@ if defined?(ActiveRecord::Base)
   begin
     require 'database_cleaner'
     DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean
+    # seed the DB with fixed application values
+    require "#{Rails.root}/db/seeds.rb"
   rescue LoadError => ignore_if_database_cleaner_not_present
   end
 end

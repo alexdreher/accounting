@@ -3,7 +3,7 @@ require 'spec_helper'
 module AccountSpecHelper
   def valid_account_attributes
     {
-      :number => 1502,
+      :number => 1503,
       :title => "Title",
       :account_type_id => 1
     }

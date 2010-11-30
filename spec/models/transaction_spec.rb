@@ -4,8 +4,8 @@ module TransactionSpecHelper
   def valid_transaction_attributes
     {
       :book_date => "241013",
-      :debit_id => 1,
-      :credit_id => 1,
+      :debit => 1000,
+      :credit => 1001,
       :amount => 1.23,
       :title => "Title"
     }
@@ -14,12 +14,9 @@ end
 
 describe Transaction do
   include TransactionSpecHelper
+  fixtures :all
   
   before(:each) do
-    @accounts = []
-    2.times do |n|
-      @accounts << Factory(:account, :number => 1501+n)
-    end
     @transaction = Transaction.new
   end
   
@@ -29,21 +26,21 @@ describe Transaction do
   end
   
   it "should have a valid credit number" do
-    @transaction.attributes = valid_transaction_attributes.except(:credit_id)
+    @transaction.attributes = valid_transaction_attributes.except(:credit)
     @transaction.should_not be_valid
-    @transaction.should have(1).error_on(:credit_id)
-    @transaction.credit = 1501
-    @transaction.credit_id.should equal 1
+    @transaction.should have(1).error_on(:credit)
+    @transaction.credit = 1000
     @transaction.should be_valid
+    @transaction.credit_id.should == 1
   end
   
   it "should have a valid debit number" do
-    @transaction.attributes = valid_transaction_attributes.except(:debit_id)
+    @transaction.attributes = valid_transaction_attributes.except(:debit)
     @transaction.should_not be_valid
-    @transaction.should have(1).error_on(:debit_id)
-    @transaction.debit = 1502
-    @transaction.debit_id.should equal 2
+    @transaction.should have(1).error_on(:debit)
+    @transaction.debit = 1001
     @transaction.should be_valid
+    @transaction.debit_id.should == 2
   end
   
   it "should belong to a debit account" do

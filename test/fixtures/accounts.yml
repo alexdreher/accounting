@@ -1,0 +1,11 @@
+one:
+  id: 1
+  number: 1000
+  title: "One"
+  account_type_id: 1
+  
+two:
+  id: 2
+  number: 1001
+  title: "Two"
+  account_type_id: 1

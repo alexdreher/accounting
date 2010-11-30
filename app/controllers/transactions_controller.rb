@@ -42,7 +42,7 @@ class TransactionsController < ApplicationController
   def create
     #params[:transaction][:booking_date] = Date.strptime(params[:transaction][:booking_date], '%d%m%y')
     @transaction = Transaction.new(params[:transaction])
-
+    
     respond_to do |format|
       if @transaction.save
         format.html { redirect_to(transactions_path, :notice => 'Transaction was successfully created.') }

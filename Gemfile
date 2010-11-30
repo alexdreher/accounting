@@ -44,4 +44,5 @@ group :test, :development do
   gem 'rcov'
   gem 'autotest'
   gem 'autotest-growl'
+  gem 'database_cleaner'
 end
