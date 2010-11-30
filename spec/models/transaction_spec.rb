@@ -16,6 +16,7 @@ describe Transaction do
   include TransactionSpecHelper
   
   before(:each) do
+    @accounts = Factory(:account)
     @transaction = Transaction.new
   end
   
@@ -41,11 +42,11 @@ describe Transaction do
   end
   
   it "should belong to a debit account" do
-    @transaction.should respond_to(:debit)
+    @transaction.should respond_to(:debit_account)
   end
   
   it "should belong to a credit account" do
-    @transaction.should respond_to(:credit)
+    @transaction.should respond_to(:credit_account)
   end
   
   it "should have an amount" do

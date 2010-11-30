@@ -3,4 +3,4 @@
 require 'active_record/fixtures'
 
 # fixed account_types, because there are only these
-Fixtures.create_fixtures(File.join(RAILS_ROOT, 'db/seedfixtures/'), 'account_types')
+Fixtures.create_fixtures(File.join(Rails.root.to_s, 'db/seedfixtures/'), 'account_types')

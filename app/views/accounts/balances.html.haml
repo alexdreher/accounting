@@ -1,4 +1,5 @@
 %h1 Listing accounts
+
 %table#balances
   %thead
     %tr
@@ -8,11 +9,12 @@
       %th Account type
   %tbody
     - @accounts.each do |account|
-      %tr
-        %td= account.number
-        %td= account.title
-        %td= account.balance
-        %td= account.account_type_id
+      - if account.bookable == 1
+        %tr
+          %td= account.number
+          %td= account.title
+          %td= account.balance
+          %td= account.account_type_id
 
 %br/
 = link_to 'New Account', new_account_path

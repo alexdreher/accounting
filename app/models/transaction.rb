@@ -1,10 +1,10 @@
 class Transaction < ActiveRecord::Base
-  belongs_to :credit, :class_name => "Account", :foreign_key => "credit_id"
-  belongs_to :debit, :class_name => "Account", :foreign_key => "debit_id"
+  belongs_to :credit_account, :class_name => "Account", :foreign_key => "credit_id"
+  belongs_to :debit_account, :class_name => "Account", :foreign_key => "debit_id"
   
   before_validation :create_booking_date
   
-  cattr_accessor :book_date
+  attr_accessor :book_date
   
   # book_date format: [01-31][01-12][dd], where d = any digit
   validates_format_of :book_date, :with => /^(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])(\d{2})$/
@@ -21,5 +21,13 @@ class Transaction < ActiveRecord::Base
     # TODO: make this configurable
     self.booking_date = Date.strptime(book_date, '%d%m%y')
   rescue
+  end
+  
+  def debit=(num)
+    self.debit_account = Account.find_by_number(num)
+  end
+  
+  def credit=(num)
+    self.credit_account = Account.find_by_number(num)
   end
 end
