@@ -24,7 +24,7 @@ Feature: Analysis
 
     When I go to the list of account balances
     Then I should see a balances table
-      | 1501 | Test1 | 3.69  | 1 |
-      | 1502 | Test1 | -3.69 | 1 |
-      | 3101 | Test2 | 3.69  | 2 |
-      | 3102 | Test2 | -3.69 | 2 |
+      | 1501 | Test1 | $3.69  | 1 |
+      | 1502 | Test1 | $-3.69 | 1 |
+      | 3101 | Test2 | $3.69  | 2 |
+      | 3102 | Test2 | $-3.69 | 2 |
