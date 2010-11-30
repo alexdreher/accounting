@@ -4,7 +4,7 @@ class Transaction < ActiveRecord::Base
   
   before_validation :create_booking_date
   
-  attr_accessor :book_date
+  attr_accessor :book_date, :debit, :credit
   
   # book_date format: [01-31][01-12][dd], where d = any digit
   validates_format_of :book_date, :with => /^(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])(\d{2})$/
@@ -22,6 +22,7 @@ class Transaction < ActiveRecord::Base
     self.booking_date = Date.strptime(book_date, '%d%m%y')
   rescue
   end
+  
   
   def debit=(num)
     self.debit_account = Account.find_by_number(num)

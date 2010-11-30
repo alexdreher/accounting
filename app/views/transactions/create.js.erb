@@ -3,8 +3,8 @@ $('.field').removeClass('field_with_errors');
 oTable.fnAddData([
 	"<%= @transaction.id %>",
 	"<%= @transaction.booking_date.strftime("%d.%m.%Y") %>",
-	"<%= @transaction.debit_id %>",
-	"<%= @transaction.credit_id %>",
+	"<%= @transaction.debit_account.number %>",
+	"<%= @transaction.credit_account.number %>",
 	"<%= number_to_currency(@transaction.amount, :unit => "€") %>",
 	"<%= @transaction.title %>"
 	]);

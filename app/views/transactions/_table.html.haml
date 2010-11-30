@@ -12,7 +12,9 @@
       %tr
         %td= transaction.id
         %td= transaction.booking_date
-        %td= transaction.debit_id
-        %td= transaction.credit_id
+        %td= transaction.debit_account.number
+        %td= transaction.credit_account.number
         %td= transaction.amount
         %td= transaction.title
+= javascript_include_tag 'jquery.dataTables'
+= javascript_include_tag 'transactions_table'
