@@ -22,7 +22,7 @@ Feature: Booking
 		And I fill in "Title" with "Testtransaction"
 		And I press "Save"
 		Then I should see a transactions table
-		  | 2013-10-24 | 3102 | 1502 | 1.23 | Testtransaction |
+		  | 2013-10-24 | 3102 | 1502 | $1.23 | Testtransaction |
 		
 	Scenario Outline: Create multiple valid transactions
 	  Given I have no transactions

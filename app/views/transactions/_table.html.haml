@@ -14,7 +14,7 @@
         %td= transaction.booking_date
         %td= transaction.debit_account.number
         %td= transaction.credit_account.number
-        %td= transaction.amount
+        %td= number_to_currency(transaction.amount)
         %td= transaction.title
 = javascript_include_tag 'jquery.dataTables'
 = javascript_include_tag 'transactions_table'

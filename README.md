@@ -33,5 +33,4 @@ You can see the rake task at [http://gist.github.com/670111](http://gist.github.
 ## TODO
 * rewrite and finish RSpec-tests (RCov 100 on cucumber + RSpec)
 * strip all unnecessary functionality, clean up (xml, scaffolded controller stuff, etc.)
-* number format amount in `transactions/index`
 * refactor javascript in [public/javascripts/transactions.js](http://github.com/alexdreher/accounting/blob/master/public/javascripts/transactions.js)

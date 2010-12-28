@@ -5,6 +5,6 @@ oTable.fnAddData([
 	"<%= @transaction.booking_date.strftime("%d.%m.%Y") %>",
 	"<%= @transaction.debit_account.number %>",
 	"<%= @transaction.credit_account.number %>",
-	"<%= number_to_currency(@transaction.amount, :unit => "€") %>",
+	"<%= number_to_currency(@transaction.amount) %>",
 	"<%= @transaction.title %>"
 	]);
