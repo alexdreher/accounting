@@ -1,7 +1,7 @@
 # Accounting
 This is a basic "accounting" app. By basic I mean really basic: just gives the ability to book transactions and have a small overview over them.
 
-You can have a look at the running software with sample data at http://testbox.lxmedia.net/accounting/
+You can have a look at the running software with sample data at [http://testbox.lxmedia.net/accounting](http://testbox.lxmedia.net/accounting)
 
 ## Motivation
 A friend, who works as an accountant, wanted to have a small app to keep track over his private finances. All the "accounting"-apps (for private finances) out there had either to much or to less functionality. So we decided to build a new one with only the functionality needed.
@@ -26,7 +26,7 @@ and get coverage information with RCov by running
 * `rake rcov:rspec` or simply:
 * `rake rcov:all`
 
-You can see the rake task at https://gist.github.com/670111
+You can see the rake task at [http://gist.github.com/670111](http://gist.github.com/670111)
 
 **Note:** The integration of all the different test plugins (RSpec-2, Cucumber, autotest, RCov) and tools was meanwhile kind of tricky with the new Rails 3 (blogpost following).
 
