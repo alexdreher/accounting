@@ -3,7 +3,9 @@ Accounting::Application.routes.draw do
 
   resources :transactions
 
-  resources :accounts
+  resources :accounts do
+    resources :transactions
+  end
   
   root :to => "transactions#index"
 

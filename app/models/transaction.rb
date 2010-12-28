@@ -34,5 +34,13 @@ class Transaction < ActiveRecord::Base
     self.booking_date = Date.strptime(book_date, '%d%m%y')
   rescue
   end
+  
+  def self.get(account)
+    if account
+      where("debit_id = ? OR credit_id = ?", account, account).all
+    else
+      all
+    end
+  end
 
 end

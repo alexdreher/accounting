@@ -12,7 +12,7 @@ describe TransactionsController do
     it "assigns all transactions as @transactions" do
       Transaction.stub(:all) { [mock_transaction] }
       get :index
-      assigns(:transactions).should eq([mock_transaction])
+      assigns(:transactions).should eql([mock_transaction])
     end
   end
 

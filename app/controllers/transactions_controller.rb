@@ -1,8 +1,8 @@
 class TransactionsController < ApplicationController
   # GET /transactions
   # GET /transactions.xml
-  def index
-    @transactions = Transaction.all(:include => [:debit_account, :credit_account])
+  def index    
+    @transactions = Transaction.get(params[:account_id])
 
     respond_to do |format|
       format.html # index.html.erb

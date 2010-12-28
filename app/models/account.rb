@@ -1,4 +1,6 @@
 class Account < ActiveRecord::Base
+  acts_as_tree :order => "number"
+  
   belongs_to :account_type
   has_many :transactions, :class_name => "Transaction", :finder_sql => 'SELECT * FROM transactions WHERE debit_id = #{self.id} OR credit_id = #{self.id}'
   
