@@ -37,9 +37,9 @@ class Transaction < ActiveRecord::Base
   
   def self.get(account)
     if account
-      where("debit_id = ? OR credit_id = ?", account, account).all
+      includes([:debit_account, :credit_account]).where("debit_id = ? OR credit_id = ?", account, account).all
     else
-      all
+      includes([:debit_account, :credit_account]).all
     end
   end
 
