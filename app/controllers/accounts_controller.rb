@@ -2,7 +2,7 @@ class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.xml
   def index
-    @accounts = Account.all
+    @accounts = Account.includes([:account_type]).all
     
     view = nil
     case params[:view]
