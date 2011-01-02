@@ -2,6 +2,7 @@ en:
   models:
     account:
       model_name: "Account"
+      model_name_plural: "Accounts"
       id: "Id"
       number: "Number"
       account_type: "Account type"

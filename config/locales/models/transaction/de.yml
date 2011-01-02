@@ -1,6 +1,8 @@
 de:
   models:
     transaction:
+      model_name: "Buchung"
+      model_name_plural: "Buchungen"
       id: "Id"
       booking_date: "Buchungsdatum"
       debit: "Soll"

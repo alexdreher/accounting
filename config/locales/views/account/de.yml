@@ -4,5 +4,6 @@ de:
       defaults:
         new: "Neues Konto"
         back: "Zurück"
+        balance_list: "Saldenliste"
       index:
         title: "Kontenübersicht"

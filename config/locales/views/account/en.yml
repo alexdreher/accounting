@@ -4,5 +4,6 @@ en:
       defaults:
         new: "New account"
         back: "Back"
+        balance_list: "Balance list"
       index:
         title: "Listing accounts"
