@@ -7,23 +7,23 @@
           %li= msg
 
   .field
-    = f.label :book_date
+    = f.label :book_date, t('models.transaction.booking_date')
     %br/
     = f.text_field :book_date
   .field
-    = f.label :debit
+    = f.label :debit, t('models.transaction.debit')
     %br/
     = f.text_field :debit
   .field
-    = f.label :credit
+    = f.label :credit, t('models.transaction.credit')
     %br/
     = f.text_field :credit
   .field
-    = f.label :amount
+    = f.label :amount, t('models.transaction.amount')
     %br/
     = f.text_field :amount
   .field
-    = f.label :title
+    = f.label :title, t('models.transaction.title')
     %br/
     = f.text_field :title
   .actions

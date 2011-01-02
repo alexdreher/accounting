@@ -1,12 +1,12 @@
-%h1 Listing accounts
+%h1= t('views.account.index.title')
 
 %table#balances
   %thead
     %tr
-      %th Number
-      %th Title
-      %th Balance
-      %th Account type
+      %th= t('models.account.number')
+      %th= t('models.account.title')
+      %th= t('models.account.balance')
+      %th= t('models.account.account_type')
   %tbody
     - @accounts.each do |account|
       - if account.bookable == 1
@@ -17,4 +17,4 @@
           %td= account.account_type_id
 
 %br/
-= link_to 'New Account', new_account_path
+= link_to t('views.account.defaults.new'), new_account_path

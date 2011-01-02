@@ -1,5 +1,5 @@
 %h1 
-  Listing transactions
+  = t('views.transaction.index.title')
   - if @account
     = "of account #{@account.number} #{@account.title}"
 
@@ -11,4 +11,4 @@
 
 %br
 
-= link_to 'New Transaction', new_transaction_path
+= link_to t('views.transaction.defaults.new'), new_transaction_path

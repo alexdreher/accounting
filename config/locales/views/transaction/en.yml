@@ -1,0 +1,8 @@
+en:
+  views:
+    transaction:
+      defaults:
+        new: "New transaction"
+        back: "Back"
+      index:
+        title: "Listing Transactions"

@@ -1,7 +1,7 @@
-%h1 New transaction
+%h1= t('views.transaction.defaults.new')
 
 = render 'table', :locals => @transactions = {}
 
 = render 'form'
 
-= link_to 'Back', transactions_path
+= link_to t('views.transaction.defaults.new'), transactions_path

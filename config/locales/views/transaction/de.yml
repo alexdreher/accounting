@@ -1,0 +1,8 @@
+de:
+  views:
+    transaction:
+      defaults:
+        new: "Neue Buchung"
+        back: "Zurück"
+      index:
+        title: "Buchungen"

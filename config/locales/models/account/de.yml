@@ -1,0 +1,10 @@
+de:
+  models:
+    account:
+      model_name: "Konto"
+      id: "Id"
+      number: "Nummer"
+      account_type: "Kontotyp"
+      title: "Titel"
+      bookable: "Bebuchbar"
+      balance: "Saldo"

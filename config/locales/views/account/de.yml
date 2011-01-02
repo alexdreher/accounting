@@ -1,0 +1,8 @@
+de:
+  views:
+    account:
+      defaults:
+        new: "Neues Konto"
+        back: "Zurück"
+      index:
+        title: "Kontenübersicht"

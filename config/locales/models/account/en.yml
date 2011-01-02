@@ -1,0 +1,10 @@
+en:
+  models:
+    account:
+      model_name: "Account"
+      id: "Id"
+      number: "Number"
+      account_type: "Account type"
+      title: "Title"
+      bookable: "Bookable"
+      balance: "Balance"

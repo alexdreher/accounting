@@ -1,0 +1,8 @@
+en:
+  views:
+    account:
+      defaults:
+        new: "New account"
+        back: "Back"
+      index:
+        title: "Listing accounts"
