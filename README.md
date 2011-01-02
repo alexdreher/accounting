@@ -4,7 +4,7 @@ This is a basic "accounting" app. By basic I mean really basic: just gives the a
 You can have a look at the running software with sample data at [http://testbox.lxmedia.net/accounting](http://testbox.lxmedia.net/accounting)
 
 ## Motivation
-A friend, who works as an accountant, wanted to have a small app to keep track over his private finances. All the "accounting"-apps (for private finances) out there had either to much or to less functionality. So we decided to build a new one with only the functionality needed.
+A friend, who works as an accountant, wanted to have a small app to keep track over his private finances. All the "accounting"-apps (for private finances) out there had either too much or too less functionality. So we decided to build a new one with only the functionality needed.
 
 First build was in Java, because the software had to be portable and multi platform (= usable from different computers with different OSs). It turned out, that the portable Java DB (Apache Derby) was way to slow to handle the fast "accountant keyboard inputs".
 
