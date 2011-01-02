@@ -17,4 +17,4 @@
         %td= number_to_currency(transaction.amount)
         %td= transaction.title
 = javascript_include_tag 'jquery.dataTables'
-= javascript_include_tag 'transactions_table'
+= javascript_include_tag "transactions_table.#{I18n.locale}"
