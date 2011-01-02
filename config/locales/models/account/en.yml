@@ -4,6 +4,7 @@ en:
       model_name: "Account"
       model_name_plural: "Accounts"
       id: "Id"
+      parent: "Parent"
       number: "Number"
       account_type: "Account type"
       title: "Title"

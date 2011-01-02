@@ -11,14 +11,17 @@
         #logo
           %h1 Accounting
         #navigation
-          = link_to t('views.transaction.defaults.new'), new_transaction_path
+          =link_to t('views.transaction.defaults.new'), new_transaction_path
           |
-          = link_to t('models.transaction.model_name_plural'), transactions_path
+          =link_to t('models.transaction.model_name_plural'), transactions_path
           |
-          = link_to t('models.account.model_name_plural'), accounts_path
+          =link_to t('models.account.model_name_plural'), accounts_path
           |
-          = link_to t('views.account.defaults.balance_list'), accounts_path(:view => "balances")
-          |
+          =link_to t('views.account.defaults.balance_list'), accounts_path(:view => "balances")
+          %span.flright 
+            =link_to "de", "?locale=de"
+            |
+            =link_to "en", "?locale=en"
       #contentwrapper
         #ajax_status
         = yield

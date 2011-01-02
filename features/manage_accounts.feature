@@ -12,11 +12,11 @@ Feature: Manage Accounts
 	Scenario: Create valid account
 		Given I have no accounts
 		And I am on the list of accounts
-		When I follow "New Account"
+		When I follow "New account"
 		And I fill in "Number" with "1502"
 		And I fill in "Title" with "Title"
 		And I select "Asset account" from "Account type"
-		And I press "Create Account"
+		And I press "Create"
 		Then I should see "Account was successfully created"
 		And I should see "1502"
 		And I should see "Title"

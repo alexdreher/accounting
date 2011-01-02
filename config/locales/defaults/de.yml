@@ -149,3 +149,8 @@ de:
         odd: "muss ungerade sein"
         even: "muss gerade sein"
         record_invalid: "Gültigkeitsprüfung ist fehlgeschlagen: %{errors}"
+  helpers:
+    submit:
+      create: 'Speichern'
+      update: 'Update'
+      submit: 'Speichern'

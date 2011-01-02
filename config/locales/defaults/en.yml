@@ -137,9 +137,9 @@ en:
       prompt: "Please select"
 
     submit:
-      create: 'Create %{model}'
-      update: 'Update %{model}'
-      submit: 'Save %{model}'
+      create: 'Create'
+      update: 'Update'
+      submit: 'Save'
 
   errors:
     format: "%{attribute} %{message}"

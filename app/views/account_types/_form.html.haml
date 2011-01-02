@@ -7,13 +7,13 @@
           %li= msg
 
   .field
-    = f.label :title
+    = f.label :title, t('.models.account.title')
     = f.text_field :title
   .field
-    = f.label :debit
+    = f.label :debit, t('.models.account.debit')
     = f.text_field :debit
   .field
-    = f.label :credit
+    = f.label :credit, t('.models.account.credit')
     = f.text_field :credit
   .actions
-    = f.submit 'Save'
+    = f.submit

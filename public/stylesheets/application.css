@@ -25,3 +25,8 @@
 .right {
   text-align: right;
 }
+
+.flright {
+  text-align: right;
+  float: right;
+}
