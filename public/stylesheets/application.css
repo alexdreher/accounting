@@ -21,3 +21,7 @@
 #contentwrapper > h1 {
   font-size:18px;
 }
+
+.right {
+  text-align: right;
+}
