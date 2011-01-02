@@ -3,6 +3,7 @@ class TransactionsController < ApplicationController
   # GET /transactions.xml
   def index    
     @transactions = Transaction.get(params[:account_id])
+    @account = Account.find(params[:account_id]) if params[:account_id]
 
     respond_to do |format|
       format.html # index.html.erb
