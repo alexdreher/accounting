@@ -1,0 +1,9 @@
+de:
+  models:
+    transaction:
+      id: "Id"
+      booking_date: "Buchungsdatum"
+      debit: "Soll"
+      credit: "Haben"
+      amount: "Betrag"
+      title: "Titel"

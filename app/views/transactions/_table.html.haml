@@ -1,12 +1,12 @@
 %table#transactions.display
   %thead      
     %tr
-      %th Id
-      %th Booking date
-      %th Debit
-      %th Credit
-      %th Amount
-      %th Title
+      %th= t('models.transaction.id')
+      %th= t('models.transaction.booking_date')
+      %th= t('models.transaction.debit')
+      %th= t('models.transaction.credit')
+      %th= t('models.transaction.amount')
+      %th= t('models.transaction.title')
   %tbody
     - @transactions.each do |transaction|
       %tr

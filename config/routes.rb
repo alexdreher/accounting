@@ -1,13 +1,14 @@
 Accounting::Application.routes.draw do
+
   resources :account_types
 
   resources :transactions
 
   resources :accounts do
     resources :transactions
-  end
+  end  
   
-  root :to => "transactions#index"
+  root :to => 'transactions#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
