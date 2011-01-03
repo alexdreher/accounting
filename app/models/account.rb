@@ -13,6 +13,6 @@ class Account < ActiveRecord::Base
   validates_presence_of :account_type_id
   
   def balance
-    account_type.debit * debit_transactions.sum('amount') + account_type.credit * credit_transactions.sum('amount')
+    @balance ||= account_type.debit * debit_transactions.sum('amount') + account_type.credit * credit_transactions.sum('amount')
   end
 end
